@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        div#area{
+            background: #9a9ad8;
+            color: white;
+            font: normal Arial;
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <div id="area" onclick="clicar()">Interaja</div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = "Clicou"
+            a.style.background = '#191970'
+        }
+        function entrar(){
+            a.innerText.bold = "Interaja"
+            a.style.background = '#4682B4'
+        }
+        function sair(){
+            a.innerText = "Clique"
+            a.style.background = '#9a9ad8'
+
+        }
+        </script>
+    
+</body>
+</html>
