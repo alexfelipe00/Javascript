@@ -26,5 +26,4 @@ function analisarNumeros(){
     for (val in vetorValores){
         soma += vetorValores[val]
     }
-    console.log(soma)
 }
