@@ -1,29 +1,54 @@
 var vetorValores = []
-var numeroInput = document.querySelector('input#numero')
+var inNumero = document.querySelector('input#num')
 var btFinalizar = document.querySelector('input#btFinalizar')
+var btAdicionar = document.querySelector('input#btAdicionar')
+var tbNum = document.querySelector('table#tbNum')
+var res = document.querySelector('p#res')
 
-function addNumeros(){
-    var numero = numeroInput.value
-    
-    var valores = document.querySelector('div#valores')
-    //tabela.innerHTML = '<tr><th>Valores</th></tr>'
-    if (numero.length == 0 || numero == 0){
-        window.alert("Digite um valor que seja diferente de zero")
+
+function inLista(n, l){
+    //Se o valor está na lista, retorna verdadeiro
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    } else {
+        return false
     }
-    else{
-        valores.innerHTML += ` ${numero},`
-        vetorValores.push(numero)
-    }
-    return vetorValores
 }
 
-vetorValores = addNumeros()
+function listNum(){
+    //Se o valor não estiver na lista, é adicionado a lista e ao vetor
+    if (!inLista(inNumero.value, vetorValores) && inNumero.value != ''){
+        //Cria uma nova linha na tabela com o valor adicionado
+        let linha = document.createElement('tr')
+        let num = document.createElement('td')
+        num.textContent = inNumero.value
+        linha.appendChild(num)
+        tbNum.appendChild(linha)
+        res.innerHTML= ''
+        //Adiciona os valores no vetor
+        vetorValores.push(Number(inNumero.value))
+    } else{
+        window.alert('Digite um número, que não esteja na lista')
+    }
+    inNumero.value = ''
+    inNumero.focus()
+}
 
-function analisarNumeros(){
-    console.log(vetorValores)
-    let soma = 0
 
-    for (val in vetorValores){
-        soma += vetorValores[val]
+function verfNumeros(){
+    soma = 0
+    if(vetorValores.length == 0){
+        window.alert("Digite pelo menos um valor")
+    }else{
+        var ordenado = vetorValores.sort()
+        for(var i=0; i<vetorValores.length; i++){
+            soma += vetorValores[i]
+        }
+
+        res.innerHTML = `Número de elementos: ${vetorValores.length}<br><br>`
+        res.innerHTML += `Valor médio: ${soma / vetorValores.length}<br><br>`
+        res.innerHTML += `Valor soma: ${soma}<br><br>`
+        res.innerHTML += `Menor valor: ${ordenado[0]}<br><br>`
+        res.innerHTML += `Maior valor: ${ordenado[ordenado.length - 1]}<br>`
     }
 }

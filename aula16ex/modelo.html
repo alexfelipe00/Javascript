@@ -12,15 +12,20 @@
         <h1>Analisador de números</h1>
     </header>
     <section>
-        <div id="form">
+        <div id="bts">
             <p>Digite um número:</p>
-            <input type="number" id="numero">
-            <input type="button" id="btAdicionar" value="Adicionar" onclick="addNumeros()">
+            <input type="number" id="num">
+            <input type="button" id="btAdicionar" value="Adicionar" onclick="listNum()">
         </div>
-        <div id="valores"></div>
+        <table id="tbNum">
+            <tr>
+                <th>Números para análise</th>
+            </tr>
+        </table>
         <div>
-            <input type="button" id="btFinalizar" value="Finalizar" onclick="analisarNumeros()">
+            <input type="button" id="btFinalizar" value="Finalizar" onclick="verfNumeros()">
         </div>
+        <div><p id="res"></p></div>
     </section>
     <script src="script.js"></script>
     <footer>

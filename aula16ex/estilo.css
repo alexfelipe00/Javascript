@@ -8,6 +8,7 @@ body{
     background-image: url('https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/620bd6d655f2044afa28bff4_glassmorphism.jpeg');
     text-align: center;
 }
+
 section{
     /* From https://css.glass */
     background: rgba(0, 0, 0, 0.13);
@@ -33,7 +34,6 @@ footer{
 }
 
 table {
-
     width:100%;
     height:100%;
     border:1px none #b3adad;
@@ -41,8 +41,8 @@ table {
     padding:10px;
     border-radius: 16px;
 }
+
 table th {
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.15);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -50,6 +50,7 @@ table th {
     -webkit-backdrop-filter: blur(10.6px);
     padding: 8px;
 }
+
 table td {
     border:1px none #b3adad;
     text-align:center;
@@ -57,18 +58,26 @@ table td {
     color: #ffffff;
 }
 
+
 #btAdicionar{
     font-family: Arial, Helvetica, sans-serif;
     height: 31px;
 }
 
+#bts{
+    padding: 10px;
+}
+
+#tbNum{
+    padding: 10px;
+}
 
 #btFinalizar{
     font-family: Arial, Helvetica, sans-serif;
     height: 31px;
 }
 
-#numero{
+#num{
     width: 50px;
     height: 25px;
     font-size: large;
