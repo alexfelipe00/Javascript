@@ -1,0 +1,18 @@
+# Criação de Variaveis
+var - O  valor pode ser substituido. (ex:   var a = "teste1";
+sempre será uma variavel global.            var a = "teste2";)
+
+let - O valor não pode ser substituido uma vez que declarado. O exemplo acima não é permitido com declaração let.
+variavel local.
+
+const - Usada para variaveis constantes, não podendo ser substituido. No caso de um vetor declarado como const, ele pode ser alterado.
+variavel local.
+
+# Vetor
+push() - Insere itens no final do array.
+
+pop() - Remove o último item o array.
+
+.shift() - Remove o primeiro elemento.
+
+.unshift() - Adiciona o elemento no início do array.
