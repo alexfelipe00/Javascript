@@ -16,3 +16,24 @@ pop() - Remove o último item o array.
 .shift() - Remove o primeiro elemento.
 
 .unshift() - Adiciona o elemento no início do array.
+
+#Operadores
+== - Igualdade. Faz a conversão para tipos iguais de dados e os compara.(ex:    3 == 3 //True
+                                                                                3 == '3' //True)
+
+=== - Igualdade estrita.  Compara também o tipo dos dados (ex:      3===3 - True
+                                                                    3==='3' - False)
+
+!= - Desigualdade. Também realiza a conversão para tipos iguais de dados e o compara. (ex:   1 =! 2 //True)
+
+!== - Desigualdade estrita. Compara também o tipo dos dados.
+
+> - Maior que. Também realiza a conversão para tipos iguais de dados e o compara.
+
+>= - Maior ou igual.
+
+< - Menor que.
+
+<= - Menor ou igual.
+
+&& - AND    || - OU
